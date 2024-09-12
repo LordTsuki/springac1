@@ -18,12 +18,13 @@ public class CategoriaProduto {
     @Column(length = 200, nullable = false)
     private String descricao;
 
-    @OneToMany(mappedBy = "categoriaCurso")
+    @OneToMany(mappedBy = "categoriaProduto")
     private List<Produto> produtos;
 
-    public CategoriaProduto(Integer id, String nome) {
+    public CategoriaProduto(Integer id, String nome, String descricao) {
         this.id = id;
         this.nome = nome;
+        this.descricao = descricao;
     }
 
     public CategoriaProduto() {

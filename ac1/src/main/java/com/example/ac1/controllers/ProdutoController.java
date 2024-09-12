@@ -22,13 +22,13 @@ public class ProdutoController {
     private ProdutoRepository produtoRepository;
 
     @GetMapping()
-    public List<Produto> getCursos() {
+    public List<Produto> getProdutos() {
         return produtoRepository.obterTodos();
     }
 
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
-    public void postCurso(@RequestBody Produto produto) {
+    public void postProdutos(@RequestBody Produto produto) {
         produtoRepository.salvar(produto);
     }
 

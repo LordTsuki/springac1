@@ -15,7 +15,7 @@ public class Produto {
     private Integer id;
     @Column(length = 200, nullable = false)
     private String nome;
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Integer qtd;
 
     @ManyToOne

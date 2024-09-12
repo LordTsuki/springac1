@@ -25,7 +25,7 @@ public class Ac1Application {
 			CategoriaProduto c1 = categoriaProdutoRepository.salvar(
 					new CategoriaProduto(0, "Cat1", "desc1"));
 			CategoriaProduto c2 = categoriaProdutoRepository.salvar(
-					new CategoriaProduto(1, "Cat2", "desc2"));
+					new CategoriaProduto(0, "Cat2", "desc2"));
 			List<CategoriaProduto> listaCategorias = categoriaProdutoRepository.obterTodos();
 			listaCategorias.forEach(System.out::println);
 

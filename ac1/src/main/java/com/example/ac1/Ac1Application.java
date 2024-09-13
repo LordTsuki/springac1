@@ -23,9 +23,9 @@ public class Ac1Application {
 		return args -> {
 			System.out.println("*** CRIANDO AS CATEGORIAS ***");
 			CategoriaProduto c1 = categoriaProdutoRepository.salvar(
-					new CategoriaProduto(0, "Cat1", "desc1"));
+					new CategoriaProduto(1, "Cat1", "desc1"));
 			CategoriaProduto c2 = categoriaProdutoRepository.salvar(
-					new CategoriaProduto(0, "Cat2", "desc2"));
+					new CategoriaProduto(2, "Cat2", "desc2"));
 			List<CategoriaProduto> listaCategorias = categoriaProdutoRepository.obterTodos();
 			listaCategorias.forEach(System.out::println);
 

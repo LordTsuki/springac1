@@ -1,6 +1,7 @@
 package com.example.ac1.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -22,6 +23,7 @@ public class Produto {
 
     @ManyToOne
     @JoinColumn(name = "categoriaProduto_id")
+    @JsonManagedReference
     private CategoriaProduto categoriaProduto;
 
     public Produto(Integer id, String nome, Integer qtd, CategoriaProduto categoriaProduto) {

@@ -32,12 +32,6 @@ public class Produto {
         this.categoriaProduto = categoriaProduto;
     }
 
-    public Produto(Integer id, String nome, Integer qtd) {
-        this.id = id;
-        this.nome = nome;
-        this.qtd = qtd;
-    }
-
     public Produto() {
     }
 

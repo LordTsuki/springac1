@@ -18,8 +18,8 @@ public class ProdutoRepository {
 
     @Transactional
     public Produto salvar(Produto produto) {
-        entityManager.merge(produto);
-        return produto;
+        return entityManager.merge(produto);
+       
     }
 
     public List<Produto> obterTodos() {
@@ -37,6 +37,14 @@ public class ProdutoRepository {
         TypedQuery<Produto> query = entityManager.createQuery(jpql, Produto.class);
         query.setParameter("nome", "%" + nome + "%");
         return query.getResultList();
+    }
+
+    public List<Produto> obterPorId(Integer id){
+        String jpql = " select c from Produto c where c.id like :id";
+        TypedQuery<Produto> query = entityManager.createQuery(jpql, Produto.class);
+        query.setParameter("id", "%" + id + "%");
+        return query.getResultList();
+
     }
 
 }

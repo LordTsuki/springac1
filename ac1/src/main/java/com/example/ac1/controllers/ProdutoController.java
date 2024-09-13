@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -24,6 +25,11 @@ public class ProdutoController {
     @GetMapping()
     public List<Produto> getProdutos() {
         return produtoRepository.obterTodos();
+    }
+
+    @GetMapping("/{id}")
+    public Produto obterPorId(@PathVariable Integer id) {
+        return (Produto) produtoRepository.obterPorId(id);
     }
 
     @PostMapping()

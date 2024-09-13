@@ -1,6 +1,5 @@
 package com.example.ac1.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Column;
@@ -71,7 +70,7 @@ public class Produto {
         return "Produto [id=" + id + ", nome=" + nome + ", quantidade=" + qtd + "]";
     }
 
-    @JsonIgnore
+    
     public CategoriaProduto getCategoriaProduto() {
         return categoriaProduto;
     }

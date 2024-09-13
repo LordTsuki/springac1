@@ -31,9 +31,9 @@ public class Ac1Application {
 
 			System.out.println("*** CRIANDO OS PRODUTOS ***");
 			produtoRepository.salvar(
-					new Produto(0, "Pro1", 2000, c1));
+					new Produto(1, "Pro1", 2000, c1));
 			produtoRepository.salvar(
-					new Produto(1, "Pro2", 2050, c2));
+					new Produto(2, "Pro2", 2050, c2));
 			List<Produto> listaProdutos = produtoRepository.obterTodos();
 			listaProdutos.forEach(System.out::println);
 		};

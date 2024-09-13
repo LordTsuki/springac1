@@ -1,5 +1,7 @@
 package com.example.ac1.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -67,6 +69,7 @@ public class Produto {
         return "Produto [id=" + id + ", nome=" + nome + ", quantidade=" + qtd + "]";
     }
 
+    @JsonIgnore
     public CategoriaProduto getCategoriaProduto() {
         return categoriaProduto;
     }
